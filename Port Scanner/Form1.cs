@@ -28,7 +28,7 @@ namespace Port_Scanner
 
             if (string.IsNullOrEmpty(textBox1.Text))
             {
-                MessageBox.Show("El campo esta vacio");
+                MessageBox.Show("You must introduce an IP Address");
             }
             else
             {
@@ -46,11 +46,11 @@ namespace Port_Scanner
                         try
                         {
                             TcpClient client = new TcpClient(ip, actualPort);
-                            listBox1.Items.Add("IP: " + ip + "  PORT: " + actualPort + "STATUS: OPEN");
+                            listBox1.Items.Add("IP: " + ip + "  PORT: " + actualPort + " STATUS: OPEN");
                         }
                         catch (Exception ex)
                         {
-                            listBox1.Items.Add("IP: " + ip + "  PORT: " + actualPort + "STATUS: CLOSED");
+                            //listBox1.Items.Add("IP: " + ip + "  PORT: " + actualPort + "STATUS: CLOSED");
                         }
                     }
 
@@ -61,22 +61,36 @@ namespace Port_Scanner
                 }
                 else if (radioButton2.Checked)
                 {
-                    //Recoge la direccion ip del textbox1
-                    string ip = textBox1.Text;
 
-                    //Recoge el puerto indicado
-                    int ipPort = int.Parse(textBox2.Text);
-
-
-                    try
+                    if (String.IsNullOrEmpty(textBox2.Text))
                     {
-                        TcpClient client = new TcpClient(ip, ipPort);
-                        listBox1.Items.Add("IP: " + ip + "  PORT: " + ipPort + "   STATUS: OPEN");
+                        MessageBox.Show("You must introduce a Port");
+
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        listBox1.Items.Add("IP: " + ip + "  PORT: " + ipPort + "   STATUS: CLOSED");
+
+
+                        //Recoge la direccion ip del textbox1
+                        string ip = textBox1.Text;
+
+                        //Recoge el puerto indicado
+                        int ipPort = int.Parse(textBox2.Text);
+
+
+                        try
+                        {
+                            TcpClient client = new TcpClient(ip, ipPort);
+                            listBox1.Items.Add("IP: " + ip + "  PORT: " + ipPort + "   STATUS: OPEN");
+                        }
+                        catch (Exception ex)
+                        {
+                            listBox1.Items.Add("IP: " + ip + "  PORT: " + ipPort + "   STATUS: CLOSED");
+                        }
+
+
                     }
+             
                 }
 
             }
