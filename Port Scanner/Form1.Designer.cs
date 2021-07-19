@@ -42,7 +42,6 @@ namespace Port_Scanner
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,9 +107,9 @@ namespace Port_Scanner
             // 
             this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(490, 114);
+            this.button1.Location = new System.Drawing.Point(490, 134);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 40);
+            this.button1.Size = new System.Drawing.Size(127, 63);
             this.button1.TabIndex = 5;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = false;
@@ -176,25 +175,12 @@ namespace Port_Scanner
             this.progressBar1.Size = new System.Drawing.Size(604, 28);
             this.progressBar1.TabIndex = 11;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(490, 157);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 40);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Stop";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(629, 460);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -231,7 +217,6 @@ namespace Port_Scanner
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button button2;
     }
 }
 
